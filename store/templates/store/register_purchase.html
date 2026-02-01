@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Register Purchase</title>
+  <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+  <div class="container" style="padding:40px 0;">
+    <h2>Register your purchase</h2>
+    <p class="sub">Ilagay ang product at reference number.</p>
+
+    <div class="panel">
+      <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-block" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
