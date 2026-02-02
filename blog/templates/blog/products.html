@@ -46,11 +46,11 @@
   <div class="product-card">
     <div class="product-img">
   {% if p.image %}
-<img src="{% static 'blog/products/' %}{{ p.image }}" alt="{{ p.name }}">
-{% else %}
-<img src="{% static 'blog/img/placeholder.png' %}" alt="{{ p.name }}">
-{% endif %}
-    </div>
+    <img src="{{ p.image.url }}" alt="{{ p.name }}">
+  {% else %}
+    <img src="{% static 'blog/img/placeholder.png' %}" alt="{{ p.name }}">
+  {% endif %}
+</div>
 
     <div class="product-body">
       <small class="product-cat">{{ p.category|default:"Other" }}</small>

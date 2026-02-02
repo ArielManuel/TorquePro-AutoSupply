@@ -1461,3 +1461,9 @@ a { color: inherit; text-decoration: none; }
   text-decoration: none;
   color: #fff;
 }
+.product-img img{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
